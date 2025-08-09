@@ -1,0 +1,604 @@
+
+
+/* 1. Google Fonts को इम्पोर्ट करें (सबसे ऊपर डालें) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
+
+:root {
+    --bs-primary: #4CAF50; /* Soft Green */
+    --bs-secondary: #E8F5E9; /* Creamy Light Green */
+    --bs-dark: #2E7D32;
+    --bs-light: #F1F8E9;
+    --bs-body-color: #333;
+}
+
+/* Reset & Base Styles */
+body {
+    background-color: var(--bs-light);
+    color: var(--bs-body-color);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    background-color: var(--bs-dark);
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--bs-secondary) !important;
+}
+
+/* ========== Buttons ========== */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* ========== Hero Section (Slider) ========== */
+.carousel-item {
+    height: 60vh;
+    background: no-repeat center center/cover;
+    position: relative;
+}
+/* ===== FIX: Horizontal scroll ===== */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#heroCarousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  padding: 1rem;
+}
+
+/* Extra safe: force no margin or overflow on body */
+body {
+  margin: 0;
+}
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+/* ========== Mobile Responsive ========== */
+@media (max-width: 767.98px) {
+    .carousel-caption h1 {
+        font-size: 1.6rem;
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+    .carousel-caption .btn {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}
+/* Har slide ke liye alag background image */
+.slide-1 {
+  background-image: url("images/slide1.jpg");
+}
+
+.slide-2 {
+  background-image: url("images/slide2.jpg");
+}
+
+.slide-3 {
+  background-image: url("images/slide3.jpg");
+}
+/* ========== About Tabs ========== */
+#about .nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #666;
+    font-weight: 600;
+}
+
+#about .nav-tabs .nav-link.active,
+#about .nav-tabs .nav-link:hover {
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+}
+
+/* ========== Services Cards ========== */
+#services .card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #F1F8E9;
+}
+
+#services .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    color: var(--bs-primary);
+}
+
+/* ========== Projects ========== */
+.project-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+/* Filter Buttons - Green Theme */
+
+#project-filters .nav-link {
+  background-color: var(--bs-light); /* Light background (match section bg) */
+  color: var(--bs-primary); /* Primary green text */
+  margin: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#project-filters .nav-link:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+#project-filters .nav-link.active {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+
+/* ========== Contact Form ========== */
+#contact .form-control {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#contact .form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+/* ========== Footer ========== */
+footer {
+    background-color: var(--bs-dark);
+    color: #fff;
+}
+
+footer a.text-white:hover {
+    color: #ddd !important;
+}
+
+footer .btn-floating {
+    background-color: var(--bs-primary);
+    color: white;
+}
+.footer-heading {
+  color: var(--bs-dark);
+}
+footer {
+  background-color: var(--bs-secondary);
+  color: var(--bs-body-color);
+}
+
+.footer-heading {
+  color: var(--bs-dark);
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--bs-body-color); /* Quick Links black */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--bs-primary); /* Hover pe Soft Green */
+  text-decoration: underline;
+}
+
+
+
+footer .btn.btn-primary {
+  background-color: var(--bs-primary); /* Button bg Soft Green */
+  border: none;
+}
+
+footer .btn.btn-primary:hover {
+  background-color: var(--bs-dark); /* Hover pe Dark Green */
+}
+
+
+/* ========== Button: Soft Raised Animation ========== */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.btn-primary:hover::after {
+    height: 300%;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+/* ========== Floating Label Form Group ========== */
+.form-floating label {
+    color: #666;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.form-floating .form-control:focus ~ label,
+.form-floating .form-control:not(:placeholder-shown) ~ label {
+    color: var(--bs-primary);
+    transform: translateY(-0.75rem) scale(0.85);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+
+/* ========== Submit Button Pulse Effect ========== */
+#contact button[type="submit"] {
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  opacity: 1;
+  transform: scale(0.85) translateY(-1.2rem) translateX(0.15rem);
+  transition: all 0.2s ease-in-out;
+}
+/* =================== HEADER POPUP COLOR UPDATE =================== */
+
+/* Navbar background */
+.navbar {
+  background-color: #204D3C; /* Dark Green Tone - soft and elegant */
+}
+
+/* Offcanvas (Popup Menu) background */
+.offcanvas {
+  background-color: #1F2E29; /* Very dark muted green */
+}
+
+/* Brand name color */
+.navbar-brand {
+  color: #DFF2E1 !important; /* Soft Cream Text */
+}
+
+/* Toggle icon */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Navigation link style */
+.offcanvas .nav-link {
+  color: #E0F3DB;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.offcanvas .nav-link:hover {
+  color: #A3E2B3;
+  transform: translateX(5px);
+}
+
+/* Optional: active link */
+.offcanvas .nav-link.active {
+  color: #9AE4B0;
+  font-weight: bold;
+}
+/* Header ke neeche jagah dene ke liye */
+body {
+  padding-top: 54px; /* header ki height + thoda margin */
+}
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ================================================== */
+/* STYLISH CONTENT PAGE STYLES */
+/* ================================================== */
+
+/* यह क्लास सिर्फ About Us, Privacy जैसे पेजों पर स्टाइल लागू करेगी */
+.content-page {
+    font-family: 'Lato', sans-serif; /* पूरे पेज के लिए डिफ़ॉल्ट फॉन्ट */
+    color: #555; /* हल्का काला टेक्स्ट */
+    line-height: 1.7; /* लाइनों के बीच दूरी, पढ़ने में आसानी के लिए */
+}
+
+/* मुख्य हेडिंग (About Us...) */
+.content-page h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #2c3e50; /* गहरा नीला-ग्रे रंग */
+    letter-spacing: 0.5px;
+}
+
+/* सब-हेडिंग्स (Our Mission...) */
+.content-page .section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+/* हेडिंग के नीचे एक छोटी हरी लाइन */
+.content-page .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #4CAF50; /* यह आपकी थीम का हरा रंग है, आप इसे बदल सकते हैं */
+}
+
+/* पैराग्राफ का पहला शब्द थोड़ा बड़ा और आकर्षक */
+.content-page p.lead {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* पैराग्राफ का टेक्स्ट */
+.content-page p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* बोल्ड टेक्स्ट को थीम के रंग में दिखाना */
+.content-page strong {
+    color: #4CAF50; /* थीम का हरा रंग */
+    font-weight: 700;
+}
+
+/* 'Important Note' वाले हिस्से को अलग से दिखाना */
+.content-page blockquote {
+    border-left: 5px solid #4CAF50; /* हरी बॉर्डर */
+    background-color: #f8f9fa; /* हल्का ग्रे बैकग्राउंड */
+    padding: 20px 25px;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+
+.content-page blockquote p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ================================================== */
+/* PROJECT GALLERY CARD SIZE FIX */
+/* ================================================== */
+/* Project wrapper */
+.project-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* Image container */
+.project-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+/* Image itself */
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay (only visible on hover) */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 15px;
+}
+
+/* Hover effects */
+.project-wrapper:hover .project-image-container img {
+  transform: scale(1.1);
+}
+.project-wrapper:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Title below image (always visible) */
+.project-title {
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.project-title h6 {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+.nav-tabs .nav-link {
+  font-weight: 600;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #d9fbe8;
+  border-color: #7ddc8c #7ddc8c #fff;
+  color: #007e3e;
+}
+
+
+
+.section-underline {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #2e7d32; /* Match with your green theme */
+}
+
+.section-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  width: 100%;
+  background-color: #66bb6a; /* Light green underline */
+  border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+  .nav-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .nav-tabs .nav-item {
+    float: none;
+    display: inline-block;
+  }
+
+  .nav-tabs .nav-link {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  /* Optional: Hide scrollbar (for aesthetic) */
+  .nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
