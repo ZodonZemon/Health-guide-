@@ -1,5 +1,3 @@
-
-
 /* 1. Google Fonts को इम्पोर्ट करें (सबसे ऊपर डालें) */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
 
@@ -601,4 +599,39 @@ body {
   .nav-tabs::-webkit-scrollbar {
     display: none;
   }
+/* ===== Mobile Layout Fixes ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    display: block;
+  }
+}
 
