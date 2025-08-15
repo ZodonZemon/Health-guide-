@@ -2,15 +2,21 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>Nourish & Nurture Health Guide</title>
+
+    <!-- Google Fonts Preconnect and Link (Moved from style.css) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons CDN (यह लाइन जोड़ें) -->
+    <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <!-- आपकी कस्टम CSS फाइल -->
+    <!-- आपकी कस्टम CSS फाइल (सुनिश्चित करें कि style.css Minified हो गया है और उसमें से @import हटा दिया गया है) -->
     <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
@@ -18,7 +24,10 @@
 <nav class="navbar navbar-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <picture>
+  <source srcset="images/akrg-logo.webp" type="image/webp">
       <img loading="lazy" src="images/akrg-logo.png" alt="AKRG Logo" style="height: 32px; margin-right: 10px;">
+      </picture>
       Nourish & Nurture Health Guide
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
@@ -50,7 +59,10 @@
 
     <!-- First Slide -->
     <div class="carousel-item active">
-      <img src="images/slide1.jpg" class="d-block w-100 zoomable" alt="Nature Power" loading="lazy">
+      <picture>
+  <source srcset="images/slide1.webp" type="image/webp">
+  <img src="images/slide1.jpg" class="d-block w-100 zoomable" alt="Nature Power" loading="lazy">
+</picture>
       <div class="carousel-caption">
         <h1>Unlock the Power of Nature</h1>
         <p>Discover the incredible benefits of natural foods and herbs for a healthier, happier life.</p>
@@ -59,7 +71,10 @@
 
     <!-- Second Slide -->
     <div class="carousel-item">
-      <img src="images/slide2.jpg" class="d-block w-100 zoomable" alt="Natural Supplements" loading="lazy">
+      <picture>
+  <source srcset="images/slide2.webp" type="image/webp">
+  <img src="images/slide2.jpg" class="d-block w-100 zoomable" alt="Natural Supplements" loading="lazy">
+</picture>
       <div class="carousel-caption">
         <h1>Your Guide to Natural Supplements</h1>
         <p>Learn how the right supplements can fill nutritional gaps and boost your well-being.</p>
@@ -68,7 +83,10 @@
 
     <!-- Third Slide -->
     <div class="carousel-item">
-      <img src="images/slide3.jpg" class="d-block w-100 zoomable" alt="Nourish & Nurture" loading="lazy">
+      <picture>
+  <source srcset="images/slide3.webp" type="image/webp">
+  <img src="images/slide3.jpg" class="d-block w-100 zoomable" alt="Nourish & Nurture" loading="lazy">
+</picture>
       <div class="carousel-caption">
         <h1>Nourish Your Body, Nurture Your Soul</h1>
       </div>
@@ -137,7 +155,10 @@
 
       <!-- Right Column: Image -->
       <div class="col-lg-6">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071" class="img-fluid rounded shadow" alt="About Us Image">
+        <picture>
+  <source srcset="images/about-us-image.webp" type="image/webp">
+  <img loading="lazy" src="images/about-us-image.jpg" class="img-fluid rounded shadow" alt="About Us Image">
+</picture>
       </div>
 
     </div>
@@ -318,7 +339,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="supplements">
     <div class="project-wrapper">
       <div class="project-image-container">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Neem">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
+  <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Neem">
+</picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item1.html" class="btn btn-outline-light btn-sm">View</a>
@@ -335,7 +359,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="fruits">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Noni Kokum">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item2.html" class="btn btn-outline-light btn-sm">View</a>
@@ -352,7 +379,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="fruits">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Amla with Honey">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item3.html" class="btn btn-outline-light btn-sm">View</a>
@@ -369,7 +399,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="fruits">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Aloevera with Honey">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item4.html" class="btn btn-outline-light btn-sm">View</a>
@@ -386,7 +419,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="herbs">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Tulsi">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item5.html" class="btn btn-outline-light btn-sm">View</a>
@@ -403,7 +439,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="supplements">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Ashwagandha">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item6.html" class="btn btn-outline-light btn-sm">View</a>
@@ -421,7 +460,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="supplements">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Giloy">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item7.html" class="btn btn-outline-light btn-sm">View</a>
@@ -438,7 +480,10 @@ Your body will thank you for it.</p>
   <div class="col-6 col-md-4 project-item" data-category="supplements">
     <div class="project-wrapper">
       <div class="project-image-container">
+        <picture>
+  <source srcset="images/creamy-white.webp" type="image/webp">
         <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Immunity">
+        </picture>
         <div class="project-overlay">
           <div class="overlay-content">
             <a href="Project-item8.html" class="btn btn-outline-light btn-sm">View</a>
@@ -621,36 +666,17 @@ Your body will thank you for it.</p>
   </div>
 </footer>
 <!-- ======================= FOOTER END ======================= -->
-    <!-- Bootstrap JavaScript CDN (Dropdown के लिए ज़रूरी) -->
+    <!-- Bootstrap JavaScript CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- आपकी कस्टम JS फाइल को यहाँ लिंक करें -->
-    <script src="script.js?v=2"></script>
+    <!-- आपकी कस्टम JS फाइल को यहाँ लिंक करें (defer एट्रीब्यूट जोड़ा गया) -->
+    <script src="script.js?v=2" defer></script>
     
-    <script>
-  const filterButtons = document.querySelectorAll('[data-filter]');
-  const projectItems = document.querySelectorAll('.project-item');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const filter = button.getAttribute('data-filter');
-
-      // Remove 'active' class from all buttons
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Filter items
-      projectItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filter === 'all' || category === filter) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
-
+    <!--
+      यह inline script हटा दिया गया है क्योंकि इसकी functionality script.js में पहले से मौजूद है।
+      script.js में मौजूद फ़िल्टरिंग कोड एनिमेशन के साथ बेहतर काम करता है।
+      इसलिए, इस ब्लॉक को यहाँ से हटा दें।
+    -->
+    
 </body>
 </html>
