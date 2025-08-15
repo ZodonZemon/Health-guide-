@@ -4,175 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>Nourish & Nurture Health Guide</title>
-    
-    <style>
-      /* --- CRITICAL CSS START --- */
-
-/* Root Variables & Body */
-:root {
-    --bs-primary: #4CAF50;
-    --bs-secondary: #E8F5E9;
-    --bs-dark: #2E7D32;
-    --bs-light: #F1F8E9;
-    --bs-body-color: #333;
-}
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-}
-body {
-    background-color: var(--bs-light);
-    color: var(--bs-body-color);
-    font-family: 'Segoe UI', sans-serif;
-    padding-top: 54px;
-}
-
-/* Navbar Styles */
-.navbar {
-    background-color: var(--bs-dark);
-    background-color: #204d3c;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-    transition: box-shadow .3s;
-}
-.navbar .nav-link {
-    color: #fff!important;
-    font-weight: 500;
-    transition: .3s;
-}
-.navbar .nav-link.active, .navbar .nav-link:hover {
-    color: var(--bs-secondary)!important;
-}
-.navbar-brand {
-    color: #dff2e1!important;
-}
-.navbar-toggler {
-    border: none;
-    outline: 0;
-}
-
-/* Offcanvas (Popup Menu) Styles */
-.offcanvas {
-    background-color: #1f2e29;
-}
-.offcanvas .nav-link {
-    color: #e0f3db;
-    font-weight: 500;
-    transition: .3s;
-}
-.offcanvas .nav-link:hover {
-    color: #a3e2b3;
-    transform: translateX(5px);
-}
-.offcanvas .nav-link.active {
-    color: #9ae4b0;
-    font-weight: 700;
-}
-
-/* Button Styles (used in Carousel) */
-.btn-primary {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-    color: #fff;
-    padding: .6rem 1.4rem;
-    font-weight: 600;
-    border-radius: 8px;
-    transition: .3s;
-    position: relative;
-    overflow: hidden;
-    border: none;
-}
-.btn-primary:hover {
-    border-color: #45a049;
-    background-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
-}
-
-/* Hero Slider (Carousel) Styles */
-.carousel-item {
-    height: 60vh;
-    position: relative;
-    transition: opacity 1s ease-in-out;
-}
-.carousel-item img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-    opacity: 0;
-    transition: opacity .8s ease-in-out;
-}
-.carousel-item img[data-loaded=true] {
-    opacity: 1;
-}
-.carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.carousel-caption h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
-    color: #fff;
-}
-.carousel-caption p {
-    font-size: 1.1rem;
-    color: #fff;
-}
-.carousel-control-next, .carousel-control-prev {
-    width: auto;
-    padding: 1rem;
-}
-.carousel.carousel-fade .carousel-item {
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-}
-.carousel.carousel-fade .carousel-item.active {
-    opacity: 1;
-}
-.zoomable {
-    touch-action: pinch-zoom!important;
-    pointer-events: auto!important;
-}
-
-/* Responsive Styles for Carousel */
-@media (max-width:767.98px) {
-    .carousel-caption h1 {
-        font-size: 1.6rem
-    }
-    .carousel-caption p {
-        font-size: .9rem
-    }
-    .carousel-caption .btn {
-        font-size: .9rem;
-        padding: .4rem 1rem
-    }
-}
-
-/* --- CRITICAL CSS END --- */
-    </style>
-    
 
     <!-- Google Fonts Preconnect and Link (Moved from style.css) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-<!-- Load CSS Asynchronously -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="style.css?v=2" media="print" onload="this.media='all'">
-
-<!-- Fallback for users with JavaScript disabled -->
-<noscript>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css?v=2">
-</noscript>
-
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- आपकी कस्टम CSS फाइल (सुनिश्चित करें कि style.css Minified हो गया है और उसमें से @import हटा दिया गया है) -->
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <!-- ======= HEADER/Navbar Start ======= -->
@@ -181,7 +26,7 @@ body {
     <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
       <picture>
   <source srcset="images/akrg-logo.webp" type="image/webp">
-      <img loading="lazy" src="images/akrg-logo.png" alt="AKRG Logo" style="height: 32px; margin-right: 10px;">
+      <img loading="lazy" src="images/akrg-logo.png" alt="AKRG Logo" style="height: 32px; margin-right: 10px;" width="30" height="30">
       </picture>
       Nourish & Nurture Health Guide
     </a>
@@ -216,7 +61,7 @@ body {
     <div class="carousel-item active">
       <picture>
   <source srcset="images/slide1.webp" type="image/webp">
-  <img src="images/slide1.jpg" class="d-block w-100 zoomable" alt="Nature Power" loading="lazy">
+  <img src="images/slide1.jpg" class="d-block w-100 zoomable" alt="Nature Power" loading="lazy" width="1920" height="1280">
 </picture>
       <div class="carousel-caption">
         <h1>Unlock the Power of Nature</h1>
@@ -228,7 +73,7 @@ body {
     <div class="carousel-item">
       <picture>
   <source srcset="images/slide2.webp" type="image/webp">
-  <img src="images/slide2.jpg" class="d-block w-100 zoomable" alt="Natural Supplements" loading="lazy">
+  <img src="images/slide2.jpg" class="d-block w-100 zoomable" alt="Natural Supplements" loading="lazy" width="1920" height="1280">
 </picture>
       <div class="carousel-caption">
         <h1>Your Guide to Natural Supplements</h1>
@@ -240,7 +85,7 @@ body {
     <div class="carousel-item">
       <picture>
   <source srcset="images/slide3.webp" type="image/webp">
-  <img src="images/slide3.jpg" class="d-block w-100 zoomable" alt="Nourish & Nurture" loading="lazy">
+  <img src="images/slide3.jpg" class="d-block w-100 zoomable" alt="Nourish & Nurture" loading="lazy" width="1920" height="1280">
 </picture>
       <div class="carousel-caption">
         <h1>Nourish Your Body, Nurture Your Soul</h1>
@@ -312,7 +157,7 @@ body {
       <div class="col-lg-6">
         <picture>
   <source srcset="images/about-us-image.webp" type="image/webp">
-  <img loading="lazy" src="images/about-us-image.jpg" class="img-fluid rounded shadow" alt="About Us Image">
+  <img loading="lazy" src="images/about-us-image.jpg" class="img-fluid rounded shadow" alt="About Us Image" width="1035" height="690">
 </picture>
       </div>
 
@@ -496,7 +341,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-  <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Neem">
+  <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Neem" width="500" height="500">
 </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -516,7 +361,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Noni Kokum">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Noni Kokum" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -536,7 +381,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Amla with Honey">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Amla with Honey" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -556,7 +401,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Aloevera with Honey">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Aloevera with Honey" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -576,7 +421,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Tulsi">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Tulsi" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -596,7 +441,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Ashwagandha">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Ashwagandha" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -617,7 +462,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Giloy">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Giloy" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
@@ -637,7 +482,7 @@ Your body will thank you for it.</p>
       <div class="project-image-container">
         <picture>
   <source srcset="images/creamy-white.webp" type="image/webp">
-        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Immunity">
+        <img loading="lazy" src="images/creamy-white.png" class="img-fluid" alt="Immunity" width="500" height="500">
         </picture>
         <div class="project-overlay">
           <div class="overlay-content">
