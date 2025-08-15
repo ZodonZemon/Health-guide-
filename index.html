@@ -2,7 +2,7 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     <title>Nourish & Nurture Health Guide</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <!-- आपकी कस्टम CSS फाइल -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 <!-- ======= HEADER/Navbar Start ======= -->
@@ -45,65 +45,49 @@
     </div>
   </div>
 </nav>
-<!-- ======= HEADER/Navbar End ======= -->
-<!-- ======================= HERO SLIDER START===================== -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- 1. नीचे के इंडिकेटर्स (Dots) -->
-    <!-- <div class="carousel-indicators">
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div> -->
-
-  <!-- 2. स्लाइडर का कंटेंट -->
+<!-- ======= HEADER/Navbar End ======= --><!-- ======================= HERO SLIDER START ===================== --><div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-inner">
-    
-    <!-- पहली स्लाइड -->
-    <div class="carousel-item active slide-1">
-      <!-- यह नया, सही कोड है -->
-<div class="carousel-caption">
+
+    <!-- First Slide -->
+    <div class="carousel-item active">
+      <img src="images/slide1.jpg" class="d-block w-100 zoomable" alt="Nature Power" loading="lazy">
+      <div class="carousel-caption">
         <h1>Unlock the Power of Nature</h1>
         <p>Discover the incredible benefits of natural foods and herbs for a healthier, happier life.</p>
-
       </div>
     </div>
 
-    <!-- दूसरी स्लाइड -->
-    <div class="carousel-item slide-2">
-      <!-- यह नया, सही कोड है -->
-<div class="carousel-caption">
+    <!-- Second Slide -->
+    <div class="carousel-item">
+      <img src="images/slide2.jpg" class="d-block w-100 zoomable" alt="Natural Supplements" loading="lazy">
+      <div class="carousel-caption">
         <h1>Your Guide to Natural Supplements</h1>
         <p>Learn how the right supplements can fill nutritional gaps and boost your well-being.</p>
-
       </div>
     </div>
 
-    <!-- तीसरी स्लाइड -->
-    <div class="carousel-item slide-3">
-      <!-- यह नया, सही कोड है -->
-<div class="carousel-caption">
+    <!-- Third Slide -->
+    <div class="carousel-item">
+      <img src="images/slide3.jpg" class="d-block w-100 zoomable" alt="Nourish & Nurture" loading="lazy">
+      <div class="carousel-caption">
         <h1>Nourish Your Body, Nurture Your Soul</h1>
-        <p></p>
-
       </div>
     </div>
 
   </div>
 
-<!-- ======================= यह सही कोड है ======================= -->
-
-  <!-- 3. लेफ्ट और राइट कंट्रोल्स (Arrows) -->
+  <!-- Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div> <!-- यह carousel का क्लोजिंग div है, इसे न हटाएं -->
-<!-- ======================= HERO SLIDER END ======================= -->
+</div>
+<!-- ======================= HERO SLIDER END ===================== -->
+
 <!-- ======================= ABOUT US SECTION START (Updated) ======================= -->
 <section id="about" class="py-5 bg-light"> <!-- bg-light की जगह आपका मौजूदा कलर रहेगा -->
   <div class="container">
@@ -641,7 +625,7 @@ Your body will thank you for it.</p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- आपकी कस्टम JS फाइल को यहाँ लिंक करें -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
     
     <script>
   const filterButtons = document.querySelectorAll('[data-filter]');

@@ -52,48 +52,24 @@ body {
     background-color: var(--bs-primary);
     color: #fff;
 }
-
 /* ========== Hero Section (Slider) ========== */
 .carousel-item {
     height: 60vh;
-    background: no-repeat center center/cover;
     position: relative;
 }
-/* ===== FIX: Horizontal scroll ===== */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* Dark overlay effect */
 }
 
-#heroCarousel {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-inner {
-  overflow: hidden;
-}
-
-.carousel-item {
-  background-size: cover;
-  background-position: center;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: auto;
-  padding: 1rem;
-}
-
-/* Extra safe: force no margin or overflow on body */
-body {
-  margin: 0;
-}
-.carousel-item::before {
-    content: "";
+.carousel-caption {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .carousel-caption h1 {
@@ -107,7 +83,22 @@ body {
     font-size: 1.1rem;
     color: #fff;
 }
-/* ========== Mobile Responsive ========== */
+
+/* Fix: No horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+/* Arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    padding: 1rem;
+}
+
+/* Mobile Responsive */
 @media (max-width: 767.98px) {
     .carousel-caption h1 {
         font-size: 1.6rem;
@@ -120,18 +111,7 @@ body {
         padding: 0.4rem 1rem;
     }
 }
-/* Har slide ke liye alag background image */
-.slide-1 {
-  background-image: url("images/slide1.jpg");
-}
 
-.slide-2 {
-  background-image: url("images/slide2.jpg");
-}
-
-.slide-3 {
-  background-image: url("images/slide3.jpg");
-}
 /* ========== About Tabs ========== */
 #about .nav-tabs .nav-link {
     border: none;
@@ -635,3 +615,61 @@ body {
   }
 }
 
+/* Fade transition between slides */
+.carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+/* Fade-in when image loads */
+.carousel-item img {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.carousel-item img[data-loaded="true"] {
+  opacity: 1;
+}
+/* Allow pinch zoom */
+.zoomable {
+  touch-action: pinch-zoom !important;
+  pointer-events: auto !important;
+}
+
+/* Hover zoom for desktop */
+@media (hover: hover) and (pointer: fine) {
+  .zoomable {
+    transition: transform 0.6s ease;
+  }
+  .zoomable:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Carousel fade effect */
+.carousel.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+/* Prevent layout shift */
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Allow pinch zoom for zoomable images */
+.zoomable {
+  touch-action: pinch-zoom !important;
+  pointer-events: auto !important;
+}

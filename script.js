@@ -44,3 +44,32 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+// Fade-in effect when hero slider images load
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('#heroCarousel img').forEach(img => {
+    img.addEventListener('load', () => {
+      img.setAttribute('data-loaded', 'true');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Bootstrap carousel autoplay is already controlled by data-bs-interval
+  // If you want to force restart after user interaction:
+  let heroCarousel = document.querySelector('#heroCarousel');
+  let carousel = new bootstrap.Carousel(heroCarousel, {
+    interval: 5000, // 5 seconds per slide
+    ride: 'carousel',
+    pause: false,
+    wrap: true
+  });
+});
+
+document.querySelectorAll('#heroCarousel .zoomable').forEach(img => {
+  img.addEventListener('touchstart', function(e) {
+    if (e.touches.length > 1) {
+      e.stopPropagation(); // Allow pinch zoom without sliding carousel
+    }
+  }, { passive: false });
+});
