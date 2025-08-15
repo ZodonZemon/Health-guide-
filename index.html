@@ -21,7 +21,7 @@ body { background-color: var(--bs-light); color: var(--bs-body-color); font-fami
 .offcanvas .nav-link.active { color: #9ae4b0; font-weight: 700; }
 .btn-primary { background-color: var(--bs-primary); border-color: var(--bs-primary); color: #fff; padding: .6rem 1.4rem; font-weight: 600; border-radius: 8px; transition: .3s; position: relative; overflow: hidden; border: none; }
 .btn-primary:hover { background-color: #45a049; border-color: #45a049; transform: translateY(-2px); box-shadow: 0 8px 15px rgba(0, 0, 0, .2); }
-.carousel-item { height: 60vh; position: relative; transition: opacity 1s ease-in-out; }
+.carousel-item { min-height: 40vh; position: relative; transition: opacity 1s ease-in-out; }
 .carousel-item img { height: 100%; object-fit: cover; filter: brightness(70%); opacity: 0; transition: opacity .8s ease-in-out; }
 .carousel-item img[data-loaded=true] { opacity: 1; }
 .carousel-caption { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
@@ -34,11 +34,11 @@ body { background-color: var(--bs-light); color: var(--bs-body-color); font-fami
 @media (max-width:767.98px) { .carousel-caption h1 { font-size: 1.6rem; } .carousel-caption p { font-size: .9rem; } .carousel-caption .btn { font-size: .9rem; padding: .4rem 1rem; } }
 /* CLS FIX FOR HERO SLIDER */
 #heroCarousel {
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 2 !important;
 }
 @media (max-width: 767.98px) {
   #heroCarousel {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3 !important;
   }
 }
 /* --- CRITICAL CSS END --- */
